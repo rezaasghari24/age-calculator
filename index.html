@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Age calculator app</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <main>
+    <section class="input-date">
+      <div class="input-date__box">
+        <label for="day-input" class="input-date__lable lable--day">day</label>
+        <input type="text" name="day-input" class="input-date__text input--day" id="" placeholder="DD">
+      </div>
+      <div class="input-date__box">
+        <label for="month-input" class="input-date__lable lable--month">month</label>
+        <input type="text" name="month-input" class="input-date__text input--month" id="" placeholder="MM">
+      </div>
+      <div class="input-date__box">
+        <label for="year-input" class="input-date__lable  lable--year">year</label>
+        <input type="text" name="year-input" class="input-date__text  input--year" id="" placeholder="YYYY">
+      </div>
+    </section>
+    <div class="sprator-box">
+      <div class="sprator"></div>
+      <button class="btn">
+        <img class="btn__icon" src="assets/images/icon-arrow.svg" alt="button-icon">
+      </button>
+    </div>
+    <section class="output-date">
+      <div class="output-date__box">
+        <p class="output-date__value output-date__value--years">--
+        <h1 class="output-date__lable output-date__lable--years">years</h1>
+      </div>
+      <div class="output-date__box">
+        <p class="output-date__value output-date__value--months">--
+        <h1 class="output-date__lable output-date__lable--months">month</h1>
+      </div>
+      <div class="output-date__box">
+        <p class="output-date__value output-date__value--days">--
+        <h1 class="output-date__lable output-date__lable--days">days</h1>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
