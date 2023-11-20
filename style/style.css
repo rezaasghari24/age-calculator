@@ -37,7 +37,8 @@ body {
 }
 
 main {
-    width: 57rem;
+    width: 65rem;
+    max-height: 54rem;
     display: flex;
     flex-direction: column;
     background-color: var(--White);
@@ -74,6 +75,7 @@ main {
 }
 
 .input-date__text {
+    font-family: 'Poppins' , sans-serif;
     outline: none;
     width: 11rem;
     border-radius: .5rem;
@@ -102,8 +104,6 @@ main {
 .separator-box {
     display: flex;
     align-items: center;
-    margin: 2rem 0;
-
 }
 .separator {
     border: .1rem solid var(--Light-grey);
@@ -142,10 +142,26 @@ main {
 .output-date__value {
     color: var(--Purple);
     margin-right: 1rem;
-    font-size: 7rem;
+    font-size: inherit;
 }
 
 .output-date__label {
     font-size: inherit;
     font-weight: inherit;
+}
+
+@media (max-width: 480px) {
+    main {
+        margin: 0 2rem;
+    }
+    .input-date > :not(:last-child) {
+        margin-right: 1rem;
+    }
+    .input-date__text {
+        width: 9rem;
+        font-size: 1.8rem;
+    }
+    .output-date__box {
+        font-size: 6rem;
+    }
 }
