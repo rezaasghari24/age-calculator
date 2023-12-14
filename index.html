@@ -1,54 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <title>Frontend Mentor | Age calculator app</title>
-  <link rel="stylesheet" href="style/style.css">
-  <script defer src="js/script.js"></script>
-</head>
-<body>
-  <main>
-    <section class="input-date">
-      <div class="input-date__box">
-        <label for="input-date--day" class="input-date__label" id="label--0">day</label>
-        <input type="number" name="day-input" oninput="dayToArray(this.value)" class="input-date__text" id="input-date--0" placeholder="DD">
-        <p class="input-date__valid input-date__valid--0"></p>
-      </div>
-      <div class="input-date__box">
-        <label for="input-date--month" class="input-date__label" id="label--1">month</label>
-        <input type="number" name="month-input" oninput="monthToArray(this.value)" class="input-date__text" id="input-date--1" placeholder="MM">
-        <p class="input-date__valid input-date__valid--1"></p>
-      </div>
-      <div class="input-date__box">
-        <label for="input-date--year" class="input-date__label " id="label--2">year</label>
-        <input type="number" name="year-input" oninput="yearToArray(this.value)" class="input-date__text" id="input-date--2" placeholder="YYYY">
-        <p class="input-date__valid input-date__valid--2"></p>
-      </div>
-    </section>
-    <div class="separator-box">
-      <div class="separator"></div>
-      <button class="btn">
-        <img class="btn__icon" src="assets/images/icon-arrow.svg" alt="button-icon">
-      </button>
-    </div>
-    <section class="output-date">
-      <div class="output-date__box">
-        <p class="output-date__value" id="output-date--year">--</p>
-        <h1 class="output-date__label output-date__label--year">years</h1>
-      </div>
-      <div class="output-date__box">
-        <p class="output-date__value" id="output-date--month">--</p>
-        <h1 class="output-date__label output-date__label--month">months</h1>
-      </div>
-      <div class="output-date__box">
-        <p class="output-date__value" id="output-date--day">--</p>
-        <h1 class="output-date__label output-date__label--day">days</h1>
-      </div>
-    </section>
-  </main>
-</body>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&family=Roboto:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Frontend Mentor | Age calculator app</title>
+		<link rel="stylesheet" href="style/style.css" />
+		<script defer src="js/script.js"></script>
+	</head>
+	<body id="body">
+		<main>
+			<section class="input-date">
+				<div class="input-date__box">
+					<label
+						for="input-date--day"
+						class="input-date__label"
+						id="label--0"
+						>day</label
+					>
+					<input
+						type="number"
+						min="1"
+						max="31"
+						name="day-input"
+						oninput="dayToArray(this.value)"
+						class="input-date__text"
+						id="input-date--0"
+						placeholder="DD"
+					/>
+					<p class="input-date__valid input-date__valid--0"></p>
+				</div>
+				<div class="input-date__box">
+					<label
+						for="input-date--month"
+						class="input-date__label"
+						id="label--1"
+						>month</label
+					>
+					<input
+						type="number"
+						min="1"
+						max="12"
+						name="month-input"
+						oninput="monthToArray(this.value)"
+						class="input-date__text"
+						id="input-date--1"
+						placeholder="MM"
+					/>
+					<p class="input-date__valid input-date__valid--1"></p>
+				</div>
+				<div class="input-date__box">
+					<label
+						for="input-date--year"
+						class="input-date__label"
+						id="label--2"
+						>year</label
+					>
+					<input
+						type="number"
+						min="1"
+						name="year-input"
+						oninput="yearToArray(this.value)"
+						class="input-date__text"
+						id="input-date--2"
+						placeholder="YYYY"
+					/>
+					<p class="input-date__valid input-date__valid--2"></p>
+				</div>
+				<div class="toggle-box">
+					<label class="switch" id="toggle-btn">
+						<input type="checkbox" id="checkbox" />
+						<span class="slider round"></span>
+					</label>
+				</div>
+			</section>
+			<div class="separator-box">
+				<div class="separator"></div>
+				<button class="btn">
+					<img
+						class="btn__icon"
+						src="assets/images/icon-arrow.svg"
+						alt="button-icon"
+					/>
+				</button>
+			</div>
+			<section class="output-date">
+				<div class="output-date__box">
+					<p class="output-date__value" id="output-date--year">--</p>
+					<h1 class="output-date__label output-date__label--year">
+						years
+					</h1>
+				</div>
+				<div class="output-date__box">
+					<p class="output-date__value" id="output-date--month">--</p>
+					<h1 class="output-date__label output-date__label--month">
+						months
+					</h1>
+				</div>
+				<div class="output-date__box">
+					<p class="output-date__value" id="output-date--day">--</p>
+					<h1 class="output-date__label output-date__label--day">
+						days
+					</h1>
+				</div>
+			</section>
+		</main>
+	</body>
 </html>
