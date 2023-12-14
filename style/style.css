@@ -41,6 +41,8 @@ html {
     font-size: 62.5%;
 }
 
+
+
 body {
     font-family: 'Poppins' , sans-serif;
     font-size: 3.2rem;
@@ -229,18 +231,33 @@ input:checked + .slider::before {
     color: var(--Off-black);
 }
 
-@media (max-width: 480px) {
+@media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+
+  @media only screen and (max-width: 48em) {
+    html {
+      font-size: 43.75%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 55%; }
     main {
-        margin: 0 2rem;
+        margin: 0 4rem;
+        padding: 3rem 2rem;
     }
     .input-date > :not(:last-child) {
         margin-right: 1rem;
     }
     .input-date__text {
-        width: 9rem;
-        font-size: 1.8rem;
+        width: 8rem;
+        font-size: 1.7rem;
     }
     .output-date__box {
         font-size: 5rem;
-    }
-}
+    } }
+  @media only screen and (min-width: 93.75em) {
+    html {
+      font-size: 68.75%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
