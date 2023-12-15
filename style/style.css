@@ -1,12 +1,12 @@
 :root {
-    --Purple: #5e43f3;
-    --Light-red: hsl(0, 100%, 67%);
+    --PrimaryColor: #5e43f3;
+    --ErrorColor: hsl(0, 100%, 67%);
 
-    --White: hsl(0, 0%, 100%);
-    --Off-white: hsl(0, 0%, 94%);
+    --CardBG: hsl(0, 0%, 100%);
+    --BG: hsl(0, 0%, 94%);
     --Light-grey: hsl(0, 0%, 86%);
     --Smokey-grey: hsl(0, 1%, 44%);
-    --Off-black: hsl(0, 0%, 8%);
+    --Text: hsl(0, 0%, 8%);
 
     --Toggle-Dark: linear-gradient(
     to right,
@@ -18,14 +18,11 @@
 }
 
 .dark-mode {
-    --Purple:#5e43f3;
-    --Light-red: hsl(0, 100%, 67%);
-
-    --White:#1e1926;
-    --Off-white: #332e3a;
+    --CardBG:#1e1926;
+    --BG: #332e3a;
     --Light-grey: #332e3a;
     --Smokey-grey: #8b8b8b;
-    --Off-black: #edecee;
+    --Text: #edecee;
 }
 
 *,
@@ -48,7 +45,7 @@ body {
     font-size: 3.2rem;
     font-weight: 400;
     line-height: 1.6;
-    background-color: var(--Light-grey);
+    background-color: var(--BG);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,7 +59,7 @@ main {
     max-height: 54rem;
     display: flex;
     flex-direction: column;
-    background-color: var(--White);
+    background-color: var(--CardBG);
     padding: 3rem;
     border-radius: 1rem 1rem 8rem;
     text-transform: uppercase;
@@ -96,7 +93,7 @@ justify-content: space-between;}
 }
 
 .input-date__text {
-    color: var(--Off-black);
+    color: var(--Text);
     font-family: 'Poppins' , sans-serif;
     outline: none;
     width: 11rem;
@@ -108,14 +105,14 @@ justify-content: space-between;}
     margin-bottom: .5rem;
     cursor: pointer;
     transition: border .2s;
-    background-color: var(--White);
+    background-color: var(--CardBG);
 }
 
 .input-date__text:hover {
-    border: .2rem solid var(--Off-black);
+    border: .2rem solid var(--Text);
 }
 .input-date__text:focus {
-    color: var(--Off-black);
+    color: var(--Text);
 }
 
 .input-date__valid {
@@ -130,7 +127,7 @@ justify-content: space-between;}
   display: flex;
   align-items: center; }
   .toggle-box > :first-child {
-    color: var(--Purple);
+    color: var(--PrimaryColor);
     margin-right: 1rem; }
 
 .switch {
@@ -169,7 +166,7 @@ input:checked + .slider:before {
   width: 23px;
   left: 32px;
   bottom: 4px;
-  background-color: var(--White) !important;
+  background-color: var(--CardBG) !important;
   border-radius: 50%;
   -webkit-transition: 0.4s;
   transition: 0.4s; }
@@ -192,7 +189,7 @@ input:checked + .slider::before {
     height: 6rem;
     border-radius: 50%;
     border: none;
-    background-color: var(--Purple);
+    background-color: var(--PrimaryColor);
     cursor: pointer;
     transition: background-color .2s;
 }
@@ -206,7 +203,7 @@ input:checked + .slider::before {
 }
 
 .btn__icon:hover {
-    color: var(--Purple);
+    color: var(--PrimaryColor);
 }
 /* OUTPUT Section */
 
@@ -220,7 +217,7 @@ input:checked + .slider::before {
 }
 
 .output-date__value {
-    color: var(--Purple);
+    color: var(--PrimaryColor);
     margin-right: 1rem;
     font-size: inherit;
 }
@@ -228,7 +225,7 @@ input:checked + .slider::before {
 .output-date__label {
     font-size: inherit;
     font-weight: inherit;
-    color: var(--Off-black);
+    color: var(--Text);
 }
 
 @media only screen and (max-width: 75em) {
