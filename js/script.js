@@ -78,7 +78,7 @@ const resolveDateIssues = function () {
 const emptyCheck = function () {
 	let conditionCheck = false;
 	for (let i = 0; i < birthDate.length; i++) {
-		if (birthDate[i] === 0 || birthDate === NaN) {
+		if (birthDate[i] <= 0 || birthDate === NaN) {
 			document.querySelector(`.input-date__valid--${i}`).textContent =
 				'This field is required';
 			colorChanger(i);
@@ -138,6 +138,7 @@ btn.addEventListener('click', function () {
 	}
 });
 
+/* Change Theme to Dark mode */
 toggle.addEventListener('change', () => {
 	body.classList.toggle('dark-mode');
 });
